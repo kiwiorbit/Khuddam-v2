@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Sitemap: https://khuddam.org/sitemap.xml
+
+# Allow all bots to access all content
+User-agent: *
+Disallow:
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Prevent access to specific files or directories if needed
+# Disallow: /private/
+# Disallow: /temp/
+# Disallow: /admin/

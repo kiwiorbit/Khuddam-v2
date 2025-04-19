@@ -1,0 +1,690 @@
+/* Custom styles beyond Tailwind */
+:root {
+    --primary-gold: #deae35;
+    --primary-gold-rgb: 222, 182, 53;
+    --primary-black: #111111;
+    --secondary-white: #FFFFFF;
+    --secondary-gray: #ececec;
+    --primary-gradient: linear-gradient(to right, #d4aa37, #DDC379, #ebdf81);
+    --btn-hover:#e9b93a;
+}
+
+/* Mission & Vision Day/Night Section */
+.backdrop-blur-sm {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+/* Text shadow for better readability on image backgrounds */
+.text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mission & Vision Card Hover Effects */
+.mission-card, .vision-card {
+    transition: all 0.3s ease;
+    border: 0.5px solid var(--primary-gold);
+}
+
+.mission-card:hover, .vision-card:hover {
+    border: 1.5px solid var(--btn-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Smooth scrolling */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Arabic text styling */
+.arabic-text {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+}
+
+/* Animation for counters */
+.counter-value {
+    transition: all 0.5s ease;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Gradient overlay for hero section */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gold);
+    border-radius: 4px;
+}
+
+/* Navbar transition */
+#navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Menu toggle button */
+#menu-toggle {
+    position: relative;
+    z-index: 9000; /* High z-index but below the mobile menu */
+    transition: all 0.3s ease;
+}
+
+/* Navbar links */
+#navbar .hidden.md\:flex a {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* Contact button hover effect */
+#navbar .hidden.md\:flex a[href="#contact"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .hidden.md\:flex a[href="#contact"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(var(--primary-gold-rgb), 0.4);
+    background-color: #e9b93a; /* Slightly lighter gold on hover */
+}
+
+#navbar .hidden.md\:flex a[href="#contact"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+#navbar .hidden.md\:flex a[href="#contact"]:hover::after {
+    transform: translateX(0);
+}
+
+/* Mobile accordion menu styling */
+#mobile-menu {
+    z-index: 9999; /* Ensure it's always on top */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed; /* Ensure it stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Accordion menu items */
+.accordion-item {
+    transition: all 0.3s ease;
+}
+
+.accordion-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion-toggle:focus {
+    outline: none;
+}
+
+.accordion-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content:not(.hidden) {
+    max-height: 500px; /* Adjust based on your content */
+}
+
+/* Mobile contact button hover effect */
+#mobile-menu a[href="#contact"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#mobile-menu a[href="#contact"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(var(--primary-gold-rgb), 0.4);
+    background-color: #e9b93a; /* Slightly lighter gold on hover */
+}
+
+#mobile-menu a[href="#contact"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+#mobile-menu a[href="#contact"]:hover::after {
+    transform: translateX(0);
+}
+
+/* Social media icons hover effect */
+#mobile-menu .fab {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu .fab:hover {
+    transform: translateY(-3px);
+}
+
+/* Scroll indicator hover effect */
+.scroll-indicator a {
+    transition: all 0.3s ease;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo-container img:hover {
+    opacity: 0.9;
+}
+
+/* Glassy navbar effect */
+.navbar-glass {
+    background-color: rgba(0, 0, 0, 0.829) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid var(--primary-gold);
+}
+
+/* Scroll reveal animations now handled by AOS library */
+
+/* Testimonial slider transitions */
+.testimonial-slide {
+    transition: opacity 0.5s ease;
+}
+
+/* Hover effects for program cards */
+.program-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card p {
+    flex: 1;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Value card hover effects */
+.value-card {
+    border: 2px solid transparent;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Timeline connector styles */
+.timeline-connector {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-gold);
+    transform: translateX(-50%);
+}
+
+/* Form focus effects */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+/* Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Primary button (gold background) */
+.btn-primary {
+    background-color: var(--primary-gold);
+    color: var(--primary-black);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover); /* Lighter gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Override for Join Now button to ensure it uses its own hover styles */
+.join-now-btn.btn-primary:hover {
+    background-color: var(--primary-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(var(--primary-gold-rgb), 0.7);
+}
+
+/* Secondary button (outlined) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--secondary-white);
+    border: 2px solid var(--secondary-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-black);
+    border-color: var(--primary-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Four Capitals - Card Design */
+.capital-card {
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.capital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Card header animation */
+.capital-card .bg-primary-gold {
+    position: relative;
+    overflow: hidden;
+}
+
+.capital-card .bg-primary-gold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+}
+
+.capital-card:hover .bg-primary-gold::after {
+    left: 100%;
+}
+
+/* Icon circle animation */
+.capital-card:hover .mx-auto.-mt-5.w-16.h-16 {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(var(--primary-gold-rgb), 0.5);
+}
+
+.capital-card .mx-auto.-mt-5.w-16.h-16 {
+    transition: all 0.3s ease;
+}
+
+/* Ensure all cards have equal height */
+.capital-card .p-6 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Push bullet points to bottom */
+.capital-card .mt-auto {
+    margin-top: auto;
+}
+
+/* Footer Styling */
+.footer-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background-color: var(--primary-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 1px rgba(var(--primary-gold-rgb), 0.7);
+    z-index: 1;
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Brand Section */
+.footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer Social Icons */
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(var(--primary-gold-rgb), 0.3);
+}
+
+/* Footer Links */
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-link {
+    position: relative;
+    padding-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    transform: translateX(5px);
+}
+
+@media (min-width: 640px) {
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Footer Contact Items */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-contact-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #1f2937; /* gray-800 */
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+}
+
+.footer-logo-container {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Media Queries for Responsive Footer */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+
+    .footer-col {
+        align-items: flex-start;
+    }
+
+    .footer-brand p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-social-icons {
+        justify-content: flex-start;
+    }
+
+    .footer-contact-item {
+        justify-content: flex-start;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+    .footer-grid {
+        gap: 3rem;
+    }
+
+    .footer-col {
+        padding: 0 1rem;
+    }
+
+    .footer-brand img {
+        margin-bottom: 1rem;
+    }
+
+    .footer-social-icons {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Journey timeline cards hover effects */
+.bg-gray-50.p-6.rounded-lg.shadow-md.inline-block {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bg-gray-50.p-6.rounded-lg.shadow-md.inline-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Mission/Vision cards hover effects */
+.bg-white.p-8.rounded-lg.shadow-md.border-l-4.border-primary-gold.text-left {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bg-white.p-8.rounded-lg.shadow-md.border-l-4.border-primary-gold.text-left:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(var(--primary-gold-rgb), 0.15);
+}
+
+
+/* Scroll indicator styling */
+.scroll-indicator {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0 !important;
+    transform: none !important;
+}
+
+/* Quran text glow animation */
+.quran-text {
+    position: relative;
+    transition: text-shadow 0.5s ease;
+}
+
+.quran-text.glow {
+    text-shadow: 0 0 15px rgba(var(--primary-gold-rgb), 0.8),
+                 0 0 30px rgba(var(--primary-gold-rgb), 0.6),
+                 0 0 45px rgba(var(--primary-gold-rgb), 0.4);
+}
+
+/* Canvas positioning */
+#orbit-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.scroll-indicator a:hover {
+    transform: scale(1.1);
+}
+
+.scroll-indicator a:hover div {
+    box-shadow: 0 0 15px rgba(var(--primary-gold-rgb), 0.7);
+    background-color: var(--primary-gold);
+}
+
+.scroll-indicator a:hover i {
+    color: var(--primary-black);
+}
+
+/* Join Now button styling */
+.join-now-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px -5px rgba(var(--primary-gold-rgb), 0.5);
+    border: 2px solid transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-now-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(var(--primary-gold-rgb), 0.7);
+    border-color: var(--primary-gold);
+}
+
+.join-now-btn i {
+    transition: transform 0.2s ease;
+    margin-left: 5px; /* Add some space between text and icon */
+    display: inline-flex;
+    align-items: center;
+}
+
+.join-now-btn:hover i {
+    transform: translateX(3px);
+}
+
+.join-now-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.join-now-btn:hover::after {
+    transform: translateX(0);
+}
+

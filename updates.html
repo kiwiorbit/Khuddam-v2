@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Updates & News - Khuddam Al-Quran</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Stay informed about Khuddam Al-Quran's latest programs, events, and community initiatives. Find updates on Arabic classes, Tafseer programs, and more.">
+    <meta name="keywords" content="Khuddam updates, Islamic events, Arabic classes, Quran Tafseer, Muslim community news, Islamic education updates">
+    <meta name="author" content="Khuddam Al-Quran">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khuddam.org/updates.html">
+    <meta property="og:title" content="Latest Updates & News - Khuddam Al-Quran">
+    <meta property="og:description" content="Stay informed about our newest programs, events, and community initiatives.">
+    <meta property="og:image" content="./images/arabicclass.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://khuddam.org/updates.html">
+    <meta property="twitter:title" content="Latest Updates & News - Khuddam Al-Quran">
+    <meta property="twitter:description" content="Stay informed about our newest programs, events, and community initiatives.">
+    <meta property="twitter:image" content="./images/arabicclass.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://khuddam.org/updates.html">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- No animations for updates page -->
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-gold': '#deae35',
+                        'primary-black': '#111111',
+                        'secondary-white': '#FFFFFF',
+                        'secondary-gray': '#ececec',
+                    },
+                    fontFamily: {
+                        'amiri': ['Amiri', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body class="font-poppins text-primary-black bg-white">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="logo-container" id="logo-link">
+                    <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-12">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
+                <a href="index.html#about" class="text-secondary-white hover:text-primary-gold transition-colors px-1">About</a>
+                <a href="programs.html" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Programs</a>
+                <a href="#" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Updates</a>
+                <a href="index.html#contact" class="bg-primary-gold text-primary-black px-6 py-2 rounded-sm transition-colors font-medium flex items-center hover:bg-yellow-500">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu - Accordion Style -->
+        <div class="md:hidden bg-primary-black bg-opacity-98 w-full fixed top-0 left-0 p-4 shadow-lg h-full overflow-y-auto transition-opacity duration-300" id="mobile-menu" style="display: none; opacity: 0; z-index: 9999;">
+            <!-- Close Button -->
+            <div class="flex justify-between items-center mb-8 pt-4">
+                <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-10">
+                <button id="close-menu" class="text-white focus:outline-none">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Accordion Menu Items -->
+            <div class="flex flex-col space-y-2">
+                <!-- About Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="index.html#about" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">About</a>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="programs.html" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Programs</a>
+                </div>
+
+                <!-- Updates Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Updates</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="mt-6">
+                    <a href="index.html#contact" class="bg-primary-gold text-primary-black px-4 py-3 transition-colors font-medium block text-center hover:bg-yellow-500">Contact Us</a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex justify-center space-x-6 mt-8 pt-4 border-t border-gray-800">
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-primary-black text-white relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Latest Updates</h1>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Stay informed about our newest programs, events, and community initiatives
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Updates Grid -->
+    <section class="py-16 bg-white updates-section">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Update Cards (Same style as index.html but more entries) -->
+                <!-- Update 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="1"
+                    data-title="New Arabic Grammar Course"
+                    data-date="June 15, 2023"
+                    data-image="images/arabicclass.jpg"
+                    data-cta-text="Register Now"
+                    data-cta-link="#registration-form"
+                    data-content="<p>Registration is now open for our intensive summer Arabic grammar course, designed for beginners and intermediate learners. This comprehensive program will run for 8 weeks and cover all essential aspects of classical Arabic grammar.</p><p>Our experienced instructors will guide you through:</p><ul><li>Foundational grammar rules and structures</li><li>Vocabulary building focused on Quranic terms</li><li>Practical application through text analysis</li><li>Progressive exercises to reinforce learning</li></ul><p>Classes will be held twice weekly, with both online and in-person options available. All learning materials are provided, and participants will receive a certificate upon successful completion.</p><p>This course is perfect for those who want to deepen their understanding of the Quran through linguistic knowledge. Limited spots are available, so early registration is recommended.</p>">
+                    <img src="images/arabicclass.jpg" alt="Arabic Class" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">June 15, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">New Arabic Grammar Course</h3>
+                        <p class="text-gray-600 mb-4">
+                            Registration is now open for our intensive summer Arabic grammar course, designed for beginners and intermediate learners.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="2"
+                    data-title="Tafseer Program Expansion"
+                    data-date="May 28, 2023"
+                    data-image="images/Tafseerclass.jpeg"
+                    data-cta-text="Join Advanced Program"
+                    data-cta-link="#tafseer-registration"
+                    data-content="<p>Our popular Tafseer program is expanding to include advanced linguistic analysis sessions for graduates of our basic courses. This expansion represents our commitment to providing continuous learning opportunities for our community.</p><p>The advanced program will focus on:</p><ul><li>Deep linguistic analysis of complex Quranic passages</li><li>Contextual understanding through historical references</li><li>Comparative study of major tafseer works</li><li>Contemporary application of Quranic wisdom</li></ul><p>Sessions will be led by Sheikh Abdullah Al-Farsi, who brings over 20 years of experience in Quranic studies and classical Arabic. The program will run for 12 weeks, with weekly 2-hour sessions available both online and in-person.</p><p>Graduates of our basic Tafseer program are eligible to apply, and a limited number of scholarships are available for dedicated students with financial constraints.</p><p>Applications open June 1st, with classes beginning in July. Early application is recommended as spaces are limited to ensure quality instruction and personalized attention.</p>">
+                    <img src="images/Tafseerclass.jpeg" alt="Tafseer Class" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">May 28, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Tafseer Program Expansion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our popular Tafseer program is expanding to include advanced linguistic analysis sessions for graduates of our basic courses.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="3"
+                    data-title="Arabic Class Homework Assignment"
+                    data-date="April 15, 2023"
+                    data-image="images/arabicclass4.jpg"
+                    data-content="<p>Attention all Arabic language students: Your weekly homework assignment has been posted and is due by <strong>Friday, April 22nd at 11:59 PM</strong>.</p><p>This week's homework focuses on applying the grammar concepts we covered in class and includes:</p><ul><li>Verb conjugation exercises (present tense)</li><li>Reading comprehension passage about daily activities</li><li>Vocabulary matching activity</li><li>Short writing prompt: 'My Daily Routine'</li><li>Listening exercise with audio recording</li></ul><p><strong>Submission Instructions:</strong></p><p>All assignments must be submitted through our Google Form: <a href='https://forms.google.com/arabic-homework-week8' class='text-primary-gold hover:underline'>https://forms.google.com/arabic-homework-week8</a></p><p>The form requires you to:</p><ol><li>Enter your full name and class section</li><li>Upload your completed worksheet as a PDF</li><li>Record and upload your pronunciation practice</li><li>Complete a short self-assessment of your understanding</li></ol><p><strong>Important Notes:</strong></p><ul><li>Late submissions will be accepted until Sunday with a 10% grade reduction</li><li>Students needing assistance can attend virtual office hours on Thursday from 4-5 PM</li><li>Parents are encouraged to review completed work before submission</li><li>Technical issues should be reported immediately to support@khuddam.org</li></ul><p>Remember that consistent homework completion is a significant component of your final grade. We look forward to reviewing your work!</p>">
+                    <img src="images/arabicclass4.jpg" alt="Arabic Class Homework" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">April 15, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Arabic Class Homework Assignment</h3>
+                        <p class="text-gray-600 mb-4">
+                            Weekly homework assignment for Arabic class students is now available. Due by Friday, April 22nd at 11:59 PM. Submit via Google Form.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="4"
+                    data-title="Youth Leadership Workshop"
+                    data-date="March 22, 2023"
+                    data-image="images/youth activity 01.jpg"
+                    data-content="<p>Our recent youth leadership workshop equipped young Muslims with essential skills for community engagement and Islamic advocacy. This three-day intensive program was designed to empower the next generation of Muslim leaders.</p><p>The workshop covered:</p><ul><li>Public speaking and presentation skills</li><li>Community organizing and event planning</li><li>Islamic principles of leadership and service</li><li>Media engagement and dawah techniques</li><li>Project management and team building</li></ul><p>Participants worked in groups to develop community service project proposals, with the top three projects receiving seed funding for implementation. The workshop also included mentoring sessions with established community leaders who shared their experiences and insights.</p><p>The feedback from participants was overwhelmingly positive, with many expressing newfound confidence in their ability to make a positive impact in their communities. We plan to offer this workshop annually and develop follow-up programs to support ongoing leadership development.</p>">
+                    <img src="images/youth activity 01.jpg" alt="Youth Workshop" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">March 22, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Youth Leadership Workshop</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our recent youth leadership workshop equipped young Muslims with essential skills for community engagement and Islamic advocacy.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="5"
+                    data-title="Dawah Training Program"
+                    data-date="February 15, 2023"
+                    data-image="images/dawah group 01.jpg"
+                    data-content="<p>Our new dawah training program provides practical tools and techniques for effective Islamic outreach in contemporary society. This comprehensive program is designed for Muslims who want to share their faith with confidence and wisdom.</p><p>The program includes:</p><ul><li>Understanding the psychology of effective communication</li><li>Addressing common misconceptions about Islam</li><li>Developing respectful dialogue skills</li><li>Using social media for positive Islamic messaging</li><li>Contextualizing Islamic teachings for diverse audiences</li></ul><p>Each session combines theoretical knowledge with practical exercises, allowing participants to develop and refine their approach to dawah. Guest speakers from various backgrounds share their experiences and strategies for effective outreach in different contexts.</p><p>The program runs for 10 weeks, with weekly 2-hour sessions and optional field activities. Participants receive a comprehensive resource kit and ongoing mentorship opportunities after completing the program.</p><p>Registration is open to adults of all backgrounds, with special rates available for students and groups. Join us in this important work of sharing the beauty and wisdom of Islam with others.</p>">
+                    <img src="images/dawah group 01.jpg" alt="Dawah Training" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">February 15, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Dawah Training Program</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our new dawah training program provides practical tools and techniques for effective Islamic outreach in contemporary society.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="6"
+                    data-title="Online Quranic Studies Platform"
+                    data-date="January 30, 2023"
+                    data-image="images/lecture class 03.jpg"
+                    data-content="<p>We're excited to announce the launch of our new online learning platform, making Quranic studies accessible to Muslims worldwide. This digital initiative represents a significant step in our mission to spread Quranic knowledge beyond geographical boundaries.</p><p>The platform features:</p><ul><li>Interactive Quranic recitation lessons with tajweed guidance</li><li>Comprehensive tafseer courses for various levels</li><li>Arabic language modules specifically for Quranic understanding</li><li>Live sessions with qualified scholars and instructors</li><li>Self-paced learning options with progress tracking</li><li>Community forums for student interaction and support</li></ul><p>Our curriculum has been developed by a team of scholars with expertise in both traditional Islamic sciences and modern educational methodologies. The platform uses adaptive learning technology to personalize the experience for each student based on their progress and learning style.</p><p>The platform is accessible on all devices, with a dedicated mobile app for learning on the go. We've implemented features to accommodate different time zones and schedules, making it easier for Muslims around the world to benefit from these resources.</p><p>Registration is now open with special founding member rates available for early enrollees. Scholarships are also available for students with financial constraints to ensure that this knowledge is accessible to all who seek it.</p>">
+                    <img src="images/lecture class 03.jpg" alt="Online Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">January 30, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Online Quranic Studies Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            We're excited to announce the launch of our new online learning platform, making Quranic studies accessible to Muslims worldwide.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Update 7 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden update-card"
+                    data-update-id="7"
+                    data-title="Annual Sports Tournament"
+                    data-date="December 12, 2022"
+                    data-image="images/sport activity 01.jpg"
+                    data-content="<p>Our annual sports tournament brought together Muslim youth from across the region for friendly competition and brotherhood building. This year's event was our largest yet, with over 300 participants from 15 different communities.</p><p>The tournament featured:</p><ul><li>Football (soccer) competitions for different age groups</li><li>Cricket matches with teams representing various masajid</li><li>Track and field events for individual competitors</li><li>Special activities for children under 10</li><li>Exhibition matches featuring community leaders</li></ul><p>Beyond the sporting events, the tournament served as an important community-building opportunity. Participants and spectators enjoyed a festive atmosphere with food stalls, Islamic book displays, and areas for families to socialize and build connections.</p><p>Sheikh Ahmad delivered an inspiring talk during the closing ceremony about the importance of physical fitness in Islam and how sports can be a means of developing discipline, teamwork, and brotherhood.</p><p>We extend our heartfelt thanks to all volunteers who made this event possible, from the referees to the food service team. Special appreciation goes to our sponsors whose generous support covered venue costs and prizes.</p><p>Planning is already underway for next year's tournament, which we hope to expand to include more women's events and additional sports. Mark your calendars for next December!</p>">
+                    <img src="images/sport activity 01.jpg" alt="Sports Tournament" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">December 12, 2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Annual Sports Tournament</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our annual sports tournament brought together Muslim youth from across the region for friendly competition and brotherhood building.
+                        </p>
+                        <button class="text-primary-gold font-medium hover:underline inline-flex items-center bg-transparent border-none cursor-pointer p-0 open-modal-btn">
+                            Read more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 space-x-2">
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-primary-gold hover:text-white transition-colors prev-button pagination-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-gold text-white pagination-button">1</button>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-primary-gold hover:text-white transition-colors pagination-button">2</button>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-primary-gold hover:text-white transition-colors pagination-button">3</button>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-primary-gold hover:text-white transition-colors next-button pagination-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-primary-black text-white py-12 relative">
+        <!-- Gold Border Top with Translation Effect -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary-gold transform -translate-y-5 shadow-gold"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Footer Content -->
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <!-- Logo and Tagline -->
+                <div class="mb-8 md:mb-0 text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <a href="index.html" class="footer-logo-container inline-block mb-4">
+                        <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-16 mb-3">
+                    </a>
+                    <p class="text-gray-400 max-w-xs">Serving the Quran. Serving the Ummah through linguistic education and spiritual development.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-6 flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-8 md:mb-0 text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Quick Links</h3>
+                    <ul class="grid grid-cols-2 gap-3">
+                        <li><a href="index.html#about" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>About</a></li>
+                        <li><a href="index.html#mission" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Mission</a></li>
+                        <li><a href="programs.html" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Programs</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Updates</a></li>
+                        <li><a href="index.html#capitals" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Four Capitals</a></li>
+                        <li><a href="index.html#contact" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Contact Us</h3>
+                    <ul class="space-y-4 flex flex-col items-center md:items-start">
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">Auckland, New Zealand</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-envelope text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">info@khuddam.org</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-phone-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2023 Khuddam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Update Modal -->
+    <div id="update-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden" aria-modal="true" role="dialog">
+        <!-- Modal Backdrop -->
+        <div class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 transition-opacity duration-300 opacity-0"></div>
+
+        <!-- Modal Content -->
+        <div class="modal-container relative bg-white rounded-lg max-w-4xl mx-auto max-h-[90vh] overflow-y-auto shadow-xl transform transition-all duration-300 scale-95 opacity-0" tabindex="-1">
+            <!-- Modal Header with Close Button -->
+            <div class="flex items-start justify-between p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <h3 class="text-2xl font-bold text-gray-900" id="modal-title"></h3>
+                <button type="button" class="modal-close text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg p-1.5 ml-auto inline-flex items-center" aria-label="Close">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6">
+                <div class="mb-4">
+                    <span class="text-sm text-gray-500" id="modal-date"></span>
+                </div>
+
+                <!-- Modal Image -->
+                <div class="mb-6">
+                    <img id="modal-image" src="" alt="Update Image" class="w-full h-auto max-h-96 object-cover rounded-lg">
+                </div>
+
+                <!-- Modal Content -->
+                <div id="modal-content" class="prose max-w-none text-gray-700"></div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="flex items-center justify-end p-6 border-t border-gray-200">
+                <button type="button" class="modal-close px-6 py-2 bg-gray-200 text-gray-800 rounded-sm hover:bg-gray-300 transition-colors font-medium">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="updates.min.js"></script>
+</body>
+</html>

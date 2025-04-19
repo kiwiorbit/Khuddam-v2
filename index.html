@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khuddam - Servants of the Quran | Islamic Education</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Khuddam Al-Quran is a community of dedicated Muslims committed to serving the Quran and the Ummah through linguistic education and spiritual development.">
+    <meta name="keywords" content="Khuddam, Quran, Islamic education, Arabic grammar, Tafseer, Muslim community, New Zealand, Islamic studies">
+    <meta name="author" content="Khuddam Al-Quran">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khuddam.org/">
+    <meta property="og:title" content="Khuddam - Servants of the Quran | Islamic Education">
+    <meta property="og:description" content="Enhancing connection to the Quran through linguistic tools and community building.">
+    <meta property="og:image" content="./images/logocurve-white.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://khuddam.org/">
+    <meta property="twitter:title" content="Khuddam - Servants of the Quran | Islamic Education">
+    <meta property="twitter:description" content="Enhancing connection to the Quran through linguistic tools and community building.">
+    <meta property="twitter:image" content="./images/logocurve-white.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://khuddam.org/">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Add AOS library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Add anime.js for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-gold': '#deae35',
+                        'primary-black': '#111111',
+                        'secondary-white': '#FFFFFF',
+                        'secondary-gray': '#ececec',
+                    },
+                    fontFamily: {
+                        'amiri': ['Amiri', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.min.css">
+
+    <!-- Custom JavaScript -->
+    <script src="script.min.js" defer></script>
+</head>
+<body class="font-poppins text-primary-black bg-white">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="logo-container" id="logo-link">
+                    <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-12">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
+                <a href="#about" class="text-secondary-white hover:text-primary-gold transition-colors px-1">About</a>
+                <a href="programs.html" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Programs</a>
+                <a href="updates.html" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Updates</a>
+                <a href="#contact" class="bg-primary-gold text-primary-black px-6 py-2 rounded-sm transition-colors font-medium flex items-center" id="desktop-contact-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu - Accordion Style -->
+        <div class="md:hidden bg-primary-black bg-opacity-98 w-full fixed top-0 left-0 p-4 shadow-lg h-full overflow-y-auto transition-opacity duration-200" id="mobile-menu" style="display: none; z-index: 9999;">
+            <!-- Close Button -->
+            <div class="flex justify-between items-center mb-8 pt-4">
+                <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-10">
+                <button id="close-menu" class="text-white focus:outline-none">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Accordion Menu Items -->
+            <div class="flex flex-col space-y-2">
+                <!-- About Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#about" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">About</a>
+                </div>
+
+
+
+                <!-- Programs Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <button class="accordion-toggle w-full py-4 px-2 flex justify-between items-center text-white hover:text-primary-gold transition-colors font-medium text-lg">
+                        <span>Programs</span>
+                        <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden pl-4 pb-4 space-y-3">
+                        <a href="programs.html" class="block py-2 text-gray-300 hover:text-primary-gold">All Programs</a>
+                        <a href="programs.html#quran-tafseer" class="block py-2 text-gray-300 hover:text-primary-gold">Quran Tafseer</a>
+                        <a href="programs.html#arabic-grammar" class="block py-2 text-gray-300 hover:text-primary-gold">Arabic Grammar</a>
+                        <a href="programs.html#dawah" class="block py-2 text-gray-300 hover:text-primary-gold">Dawah Initiatives</a>
+                        <a href="programs.html#youth" class="block py-2 text-gray-300 hover:text-primary-gold">Youth Engagement</a>
+                    </div>
+                </div>
+
+                <!-- Testimonials Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#testimonials" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Impact Stories</a>
+                </div>
+
+                <!-- Updates Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="updates.html" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Updates</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="mt-6">
+                    <a href="#contact" class="bg-primary-gold text-primary-black px-4 py-3 transition-colors font-medium block text-center hover:bg-yellow-500">Contact Us</a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex justify-center space-x-6 mt-8 pt-4 border-t border-gray-800">
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center justify-center bg-primary-black text-white" id="hero">
+        <img src="images/kaaba photo.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-10">
+        <!-- Background Pattern -->
+
+        <!-- Hero Content -->
+        <div class="hero-content container mx-auto px-6 z-10 text-center" id="hero-content">
+            <h1 class="font-amiri text-7xl md:text-8xl mb-3 text-white" data-aos="fade-down" data-aos-duration="1200">خُدَّام</h1>
+            <h1 class="font-amiri text-7xl md:text-8xl mb-20 text-primary-gold quran-text" data-aos="fade-up" data-aos-duration="1200" id="quran-text">القُرآن</h1>
+
+            <!-- Canvas for the orbiting Arabic letters animation -->
+            <canvas id="orbit-canvas" class="absolute inset-0 w-full h-full z-0 opacity-100 pointer-events-none"></canvas>
+
+            <p class="text-3xl md:text-3xl mb-6 font-normal" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                Serving the Quran | Serving the Ummah
+            </p>
+            <p class="max-w-2xl mx-auto text-lg mb-10 text-gray-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Enhance your connection to the Quran through linguistic tools and community building.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <a href="#register" class="btn btn-primary join-now-btn transition-all duration-300">
+                    <span class="flex items-center">
+                        Join Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+                <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 w-full animate-bounce scroll-indicator z-20">
+            <a href="#about" id="scroll-down-btn" class="text-primary-gold hover:text-white flex flex-col items-center transition-all duration-300">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-gold transition-all duration-300">
+                    <i class="fa-solid fa-chevron-down text-2xl"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- About Us Image -->
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <img src="images/Arabic Letters.webp" alt="Arabic Calligraphy" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-white rounded-full flex items-center justify-center shadow-lg hidden md:flex">
+                            <img src="./images/khuddam-logo-black.png" alt="Khuddam Logo" class="h-20">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us Content -->
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="text-4xl font-bold mb-4">About <span class="font-amiri">خُدَّام الْقُرآن</span></h2>
+                    <div class="w-24 h-1 bg-primary-gold mb-8"></div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Founded in 2020, Khuddam-Al-Quran meaning <span class="text-primary-gold font-bold ">"Servants of the Quran"</span> is a community of dedicated Muslims committed to serving the Quran and the Ummah through linguistic education and spiritual development.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Our organization brings together scholars, educators, and students from diverse backgrounds, united by a common goal: to strengthen our connection with the Quran through understanding its original language and applying its timeless wisdom in our daily lives.
+                    </p>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        We believe that linguistic access to the Quran opens doors to profound spiritual insights that can transform individuals and communities, ultimately contributing to the revival of Islamic scholarship and civilization.
+                    </p>
+                    <a href="programs.html" class="btn btn-primary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section - Day/Night Metaphor Design -->
+    <section id="mission" class="mv-section py-20 relative overflow-hidden">
+        <!-- Background Image - Waterfall -->
+        <img src="./images/lotetreewaterfall.png" alt="Waterfall Background" class="absolute inset-0 w-full h-full object-cover opacity-100">
+
+        <!-- Semi-transparent overlay for better text visibility -->
+        <div class="absolute inset-0 bg-black/70 z-5"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 relative">
+                    <span class="relative z-10 px-4 sm:px-8 py-2 sm:py-3 text-white inline-block border-b-4 border-primary-gold text-shadow-">AIM</span>
+                </h2>
+                <p class="mx-auto text-base md:text-2xl text-white mb-10 relative px-4 sm:px-0">
+                    <span class="relative z-10 inline-block px-3 sm:px-6 py-2 sm:py-3 text-shadow-md">
+                        Guiding our journey from today's actions to tomorrow's aspirations
+                    </span>
+                </p>
+            </div>
+
+            <!-- Unified Mission & Vision Design -->
+            <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+                <!-- Mission Section -->
+                <div class="mission-card bg-primary-black/60 text-white p-6 sm:p-8 md:p-10 mb-10 rounded-lg shadow-xl shadow-white/10 backdrop-blur-sm relative overflow-hidden">
+                    <!-- Mission Icon -->
+                    <div class="absolute top-6 right-6 sm:right-8">
+                        <i class="fa-solid fa-compass text-4xl sm:text-5xl text-primary-gold"></i>
+                    </div>
+                    <!-- Mission Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 inline-block text-primary-gold border-b-2 border-primary-gold pb-2">
+                            Our Mission
+                        </h3>
+                        <p class="text-white leading-relaxed mb-4 sm:mb-6 max-w-4xl">
+                            At Khuddam, we are dedicated to deepening participants' connection to the Quran through linguistic tools and community building, making the divine message accessible to all Muslims regardless of their background.
+                        </p>
+                        <ul class="space-y-2 sm:space-y-3 max-w-4xl">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-gold mt-1 mr-2"></i>
+                                <span>Providing accessible Arabic language education</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-gold mt-1 mr-2"></i>
+                                <span>Building supportive learning communities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-gold mt-1 mr-2"></i>
+                                <span>Developing practical Quranic understanding</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vision Section -->
+                <div class="vision-card bg-primary-black/60 text-white p-6 sm:p-8 md:p-10 mb-10 rounded-lg shadow-xl backdrop-blur-sm shadow-white/10 relative overflow-hidden">
+                    <!-- Vision Icon -->
+                    <div class="absolute top-4 sm:top-6 right-4 sm:right-8">
+                        <i class="fa-solid fa-binoculars text-3xl sm:text-4xl md:text-5xl text-primary-gold"></i>
+                    </div>
+                    <!-- Vision Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-primary-gold inline-block border-b-2 border-primary-gold pb-2">
+                            Our Vision
+                        </h3>
+                        <p class="text-white leading-relaxed mb-4 sm:mb-6 max-w-4xl">
+                            We envision a global community of Muslims who understand the Quran in its original language, applying its timeless wisdom to strengthen the Ummah and revive the golden age of Islamic scholarship and civilization.
+                        </p>
+                        <ul class="space-y-2 sm:space-y-3 max-w-4xl">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-primary-gold mt-1 mr-2"></i>
+                                <span>Reviving classical Islamic scholarship</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-primary-gold mt-1 mr-2"></i>
+                                <span>Empowering Muslims through Quranic wisdom</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-primary-gold mt-1 mr-2"></i>
+                                <span>Building bridges across Muslim communities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Counter Section -->
+    <section class="counter-section py-20 bg-primary-black text-white relative overflow-hidden">
+        <img src="images/kaaba2.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-10">
+
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary-gold">Our Global Impact</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300">
+                    Proudly Serving Muslims Families Around Aotearoa, New Zealand
+                </p>
+            </div>
+
+            <!-- Counters -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <!-- Counter 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="text-5xl font-bold text-primary-gold mb-2" id="families-counter">0</div>
+                    <p class="text-xl">Families Served</p>
+                </div>
+
+                <!-- Counter 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-primary-gold mb-2" id="students-counter">0</div>
+                    <p class="text-xl">Active Students</p>
+                </div>
+
+                <!-- Counter 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-primary-gold mb-2" id="graduates-counter">0</div>
+                    <p class="text-xl">Graduates</p>
+                </div>
+
+                <!-- Counter 4 -->
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="text-5xl font-bold text-primary-gold mb-2" id="countries-counter">0</div>
+                    <p class="text-xl">Countries Reached</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Programs Section -->
+    <section id="programs" class="py-20 bg-white relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-20 z-0">
+            <img src="images/quranpage.jpg" alt="Quran Page Background" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Programs</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    Explore our comprehensive programs designed to deepen your connection with the Quran
+                    and strengthen your understanding of Islam.
+                </p>
+            </div>
+
+            <!-- Programs Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Program 1: Arabic Grammar -->
+                <div class="bg-white/20 border border-gray-200 rounded-lg overflow-hidden backdrop-blur shadow-md program-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="bg-primary-gold h-2"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-language text-primary-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Arabic Grammar</h3>
+                        <p class="text-gray-600 text-center">
+                            Our weekly Arabic grammar classes serve all levels, providing essential tools to understand the Quran more deeply. Through clear instruction in classical grammar, students gain the skills to access its original meaning and beauty.
+                        </p>
+                    </div>
+                </div>
+                <!-- Program 2: Quran Tafseer -->
+                <div class="bg-white/20 border border-gray-200 rounded-lg overflow-hidden backdrop-blur shadow-md program-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="bg-primary-gold h-2"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book-quran text-primary-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Quran Tafseer</h3>
+                        <p class="text-gray-600 text-center">
+                            In-depth exploration of Quranic ayahs through comprehensive linguistic analysis and contextual understanding. Our Tafseer classes empower individuals to enhance their comprehension and bridging its timeless teachings with daily life and spiritual growth.
+                        </p>
+                    </div>
+                </div>
+                <!-- Program 3: Dawah Initiatives -->
+                <div class="bg-white/20 border border-gray-200 rounded-lg overflow-hidden backdrop-blur shadow-md program-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="bg-primary-gold h-2"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hands-helping text-primary-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Dawah Initiatives</h3>
+                        <p class="text-gray-600 text-center">
+                            Community outreach programs to share the beauty and wisdom of the Quran with others. Our Dawah stalls and mosque open days invite non-Muslims to learn about Islam, fostering understanding and dialogue.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 4: Youth Engagement -->
+                <div class="bg-white/20 border border-gray-200 rounded-lg overflow-hidden backdrop-blur shadow-md program-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="bg-primary-gold h-2"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-child text-primary-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Youth Engagement</h3>
+                        <p class="text-gray-600 text-center">
+                            Special programs designed for young Muslims to develop a strong connection with the Quran. From sports events to character-building lectures, we nurture youth with strong Islamic values and personal growth opportunities
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Learn More Button -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <a href="programs.html" class="btn btn-primary inline-flex items-center">
+                    Learn More About Our Programs
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four Capitals Section - Dark Theme Design -->
+    <section id="capitals" class="py-20 bg-primary-black text-white relative overflow-hidden">
+        <!-- Background Image - Arabic Sky -->
+        <img src="./images/kaaba3.jpg" alt="kaaba Background" class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary-gold">The Four Capitals</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-8">
+                    Our mission is to equip the next generation with the four essential capitals needed to strengthen the Ummah
+                    and bring back the golden age of Islam.
+                </p>
+            </div>
+
+            <!-- Four Capitals Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-rows-2 gap-8 max-w-5xl mx-auto">
+                <!-- Intellectual Capital Card -->
+                <div class="capital-card bg-primary-black/10 border border-primary-gold/30 backdrop-blur rounded-lg shadow-lg overflow-hidden h-full flex flex-col" data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Icon Circle -->
+                    <div class="mx-auto mt-6 w-12 h-12 rounded-full bg-primary-gold flex items-center justify-center shadow-md">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-center mb-4 text-primary-gold">Intellectual Capital</h3>
+
+                        <p class="text-gray-300 mb-6 text-center">
+                            Developing deep knowledge and understanding of the Quran, Hadith, and Islamic sciences through rigorous study and critical thinking.
+                        </p>
+
+                        <ul class="mt-auto space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Quranic linguistic analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Arabic grammar mastery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Tafseer methodology</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Islamic scholarship</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Moral Capital Card -->
+                <div class="capital-card bg-primary-black/10 backdrop-blur border border-primary-gold/30 rounded-lg shadow-lg overflow-hidden h-full flex flex-col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                    <!-- Icon Circle -->
+                    <div class="mx-auto mt-6 w-12 h-12 rounded-full bg-primary-gold flex items-center justify-center shadow-md">
+                        <i class="fas fa-heart text-white text-lg"></i>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-center mb-4 text-primary-gold">Moral Capital</h3>
+
+                        <p class="text-gray-300 mb-6 text-center">
+                            Building character and ethical foundations based on Quranic teachings and the Sunnah of the Prophet Muhammad (PBUH).
+                        </p>
+
+                        <ul class="mt-auto space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Character development</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Ethical decision-making</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Spiritual growth</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Community service</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Financial Capital Card -->
+                <div class="capital-card bg-primary-black/10 backdrop-blur border border-primary-gold/30 rounded-lg shadow-lg overflow-hidden h-full flex flex-col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <!-- Icon Circle -->
+                    <div class="mx-auto mt-6 w-12 h-12 rounded-full bg-primary-gold flex items-center justify-center shadow-md">
+                        <i class="fas fa-coins text-white text-lg"></i>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-center mb-4 text-primary-gold">Financial Capital</h3>
+
+                        <p class="text-gray-300 mb-6 text-center">
+                            Promoting economic empowerment and financial literacy within Islamic principles to build sustainable communities.
+                        </p>
+
+                        <ul class="mt-auto space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Islamic finance principles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Entrepreneurship skills</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Wealth management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Charitable giving</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Political Capital Card -->
+                <div class="capital-card bg-primary-black/10 backdrop-blur border border-primary-gold/30 rounded-lg shadow-lg overflow-hidden h-full flex flex-col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+
+                    <!-- Icon Circle -->
+                    <div class="mx-auto mt-6 w-12 h-12 rounded-full bg-primary-gold flex items-center justify-center shadow-md">
+                        <i class="fas fa-landmark text-white text-lg"></i>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-center mb-4 text-primary-gold">Political Capital</h3>
+
+                        <p class="text-gray-300 mb-6 text-center">
+                            Developing leadership skills and civic engagement to represent Muslim communities effectively.
+                        </p>
+
+                        <ul class="mt-auto space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Community leadership</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Public speaking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Advocacy skills</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-300">Interfaith dialogue</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <!--
+    <section id="updates" class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Latest Updates</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
+                    Stay informed about our newest programs, events, and community initiatives
+                </p>
+            </div>
+
+            <!-- Updates Grid -->
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"> -->
+                <!-- Update 1 -->
+                <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="images/arabicclass.jpg" alt="Arabic Class" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">June 15, 2023</span>
+                            <span class="bg-primary-gold text-white text-xs px-2 py-1">Event</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">New Arabic Grammar Course</h3>
+                        <p class="text-gray-600 mb-4">
+                            Registration is now open for our intensive summer Arabic grammar course, designed for beginners and intermediate learners.
+                        </p>
+                        <a href="#" class="text-primary-gold font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Update 2 -->
+                <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <img src="images/quranpage.jpg" alt="Quran Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">May 28, 2023</span>
+                            <span class="bg-green-500 text-white text-xs px-2 py-1">Program</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Tafseer Program Expansion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our popular Tafseer program is expanding to include advanced linguistic analysis sessions for graduates of our basic courses.
+                        </p>
+                        <a href="#" class="text-primary-gold font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Update 3 -->
+                <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="images/kaaba2.jpg" alt="Community Event" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">April 10, 2023</span>
+                            <span class="bg-blue-500 text-white text-xs px-2 py-1">Community</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Community Iftar Success</h3>
+                        <p class="text-gray-600 mb-4">
+                            Thank you to everyone who participated in our annual community iftar. Over 200 families joined us for this blessed gathering.
+                        </p>
+                        <a href="#" class="text-primary-gold font-medium hover:underline inline-flex items-center">
+                            See photos
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- View All Updates Button -->
+            <!-- <div class="text-center mt-12">
+                <a href="updates.html" class="btn btn-primary inline-flex items-center">
+                    View All Updates
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 text-gray-800 relative overflow-hidden">
+        <img src="./images/Quran photo.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-10">
+
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary-black">Impact Stories</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                    Hear from our community members about how Khuddam has transformed their relationship with the Quran
+                </p>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="relative max-w-4xl mx-auto" id="testimonial-container">
+                <!-- Testimonials -->
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-lg shadow-lg border border-gray-100" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 shadow-md border-2 border-primary-gold">
+                                <img src="./images/arabicclass.jpg" alt="Ahmed" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-6">
+                                    "Before joining Khuddam, I struggled to understand the deeper meanings of the Quran. The Arabic grammar courses have transformed my ability to connect with Allah's words. Now I can appreciate the linguistic beauty and precise meaning of each verse."
+                                </p>
+                                <div>
+                                    <h4 class="font-bold text-xl text-primary-black">Ahmed Ibrahim</h4>
+                                    <p class="text-gray-500">Arabic Grammar Program Graduate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 shadow-md border-2 border-primary-gold">
+                                <img src="./images/arabicclass.jpg" alt="Fatima" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-6">
+                                    "The Tafseer program at Khuddam has been life-changing for my family. We now have weekly Quran discussions at home, and my children are developing a love for the Quran I never had at their age. The linguistic approach makes complex concepts accessible."
+                                </p>
+                                <div>
+                                    <h4 class="font-bold text-xl text-primary-black">Waqar Raja</h4>
+                                    <p class="text-gray-500">Family Tafseer Program Participant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 shadow-md border-2 border-primary-gold">
+                                <img src="./images/arabicclass.jpg" alt="Yusuf" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-6">
+                                    "As a youth leader in my community, the skills I've gained through Khuddam's programs have been invaluable. I've learned how to engage young Muslims with the Quran in ways that speak to their modern experiences while preserving traditional knowledge."
+                                </p>
+                                <div>
+                                    <h4 class="font-bold text-xl text-primary-black">Zaka Chohan</h4>
+                                    <p class="text-gray-500">Youth Engagement Program Leader</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-6 md:-translate-x-12 bg-primary-gold text-primary-black w-10 h-10 rounded-full flex items-center justify-center focus:outline-none shadow-md" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-6 md:translate-x-12 bg-primary-gold text-primary-black w-10 h-10 rounded-full flex items-center justify-center focus:outline-none shadow-md" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-primary-gold shadow-sm" data-index="0"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300 shadow-sm" data-index="1"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300 shadow-sm" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action & Contact Section -->
+    <section id="register" class="py-20 bg-primary-black text-white relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-20 z-0">
+            <img src="images/Masjid Interior.jpg" alt="Masjid Interior" class="w-full h-full object-cover">
+        </div>
+
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- CTA Header -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary-gold">Join the Khuddam Community</h2>
+                <p class="text-xl mb-10 text-gray-300">
+                    Take the first step towards deepening your connection with the Quran and becoming a servant of Allah's words.
+                </p>
+
+            </div>
+            <!-- Contact Form  -->
+            <div id="contact" class="max-w-4xl mx-auto bg-opacity-5 backdrop-blur rounded-lg shadow-xl border border-primary-gold p-8 md:p-12">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Contact Us</h3>
+                    <div class="w-24 h-1 bg-primary-gold mx-auto mb-6 rounded-full"></div>
+                    <p class="max-w-3xl mx-auto text-lg text-white">
+                        Have questions about our programs? Get in touch with us and we'll be happy to help.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <form id="contact-form" class="space-y-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Name Field -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-white mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-primary-black opacity-50 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
+                                    placeholder="Enter your name">
+                            </div>
+
+                            <!-- Email Field -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-white mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-primary-black opacity-50 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
+                                    placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-white mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 bg-primary-black opacity-50 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
+                                placeholder="What is this regarding?">
+                        </div>
+
+                        <!-- Message Field -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-white mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 bg-primary-black opacity-50 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
+                                placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit"
+                                class="bg-primary-gold hover:bg-primary-gold-light text-primary-black px-8 py-4 rounded-md transition-all font-medium text-lg pulse-animation shadow-gold">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Contact Information -->
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Email -->
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="icon-container bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-gold">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-white">Email</h3>
+                            <p class="text-white opacity-80">info@khuddam.org</p>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="icon-container bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-gold">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-white">Phone</h3>
+                            <p class="text-white opacity-80">+1 (555) 123-4567</p>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="icon-container bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-gold">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-white">Location</h3>
+                            <p class="text-white opacity-80">Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-primary-black text-white py-12 relative">
+        <!-- Gold Border Top with Translation Effect -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary-gold transform -translate-y-5 shadow-gold"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Footer Content -->
+            <div class="footer-grid">
+                <!-- Logo and Tagline -->
+                <div class="footer-col footer-brand">
+                    <a href="#" class="footer-logo-container inline-block mb-4">
+                        <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-20 mb-3">
+                    </a>
+                    <p class="text-gray-400 max-w-xs mx-auto md:mx-0">Serving the Quran. Serving the Ummah through linguistic education and spiritual development.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons">
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col footer-links">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Quick Links</h3>
+                    <ul class="footer-links-grid gap-3">
+                        <li><a href="#about" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>About</a></li>
+                        <li><a href="#mission" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Mission</a></li>
+                        <li><a href="#programs" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Programs</a></li>
+                        <li><a href="#capitals" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Four Capitals</a></li>
+                        <li><a href="#updates" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Updates</a></li>
+                        <li><a href="#contact" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col footer-contact">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-map-marker-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">Auckland, New Zealand</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-envelope text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">info@khuddam.org</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-phone-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2023 Khuddam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

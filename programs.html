@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Education Programs - Khuddam Al-Quran</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Khuddam Al-Quran's comprehensive Islamic education programs including Arabic Grammar, Quran Tafseer, Dawah Initiatives, and Youth Engagement.">
+    <meta name="keywords" content="Islamic education, Arabic grammar, Quran Tafseer, Dawah, Youth programs, Islamic studies, Quranic learning">
+    <meta name="author" content="Khuddam Al-Quran">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khuddam.org/programs.html">
+    <meta property="og:title" content="Islamic Education Programs - Khuddam Al-Quran">
+    <meta property="og:description" content="Discover our comprehensive Islamic education programs designed to deepen your connection with the Quran.">
+    <meta property="og:image" content="./images/arabicclass9.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://khuddam.org/programs.html">
+    <meta property="twitter:title" content="Islamic Education Programs - Khuddam Al-Quran">
+    <meta property="twitter:description" content="Discover our comprehensive Islamic education programs designed to deepen your connection with the Quran.">
+    <meta property="twitter:image" content="./images/arabicclass9.jpeg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://khuddam.org/programs.html">
+
+    <!-- Same header content as index.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Add AOS library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Same Tailwind config as index.html -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-gold': '#deae35',
+                        'primary-black': '#111111',
+                        'secondary-white': '#FFFFFF',
+                        'secondary-gray': '#ececec',
+                    },
+                    fontFamily: {
+                        'amiri': ['Amiri', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body class="font-poppins text-primary-black bg-white">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="logo-container" id="logo-link">
+                    <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-12">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
+                <a href="#quran-tafseer" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Quran Tafseer</a>
+                <a href="#arabic-grammar" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Arabic Grammar</a>
+                <a href="#dawah" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Dawah Initiatives</a>
+                <a href="#youth" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Youth Engagement</a>
+                <a href="#conference-gallery" class="text-secondary-white hover:text-primary-gold transition-colors px-1">Conference</a>
+                <a href="index.html#contact" class="bg-primary-gold text-primary-black px-6 py-2 rounded-sm transition-colors font-medium flex items-center hover:bg-yellow-500" id="desktop-contact-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu - Accordion Style -->
+        <div class="md:hidden bg-primary-black bg-opacity-98 w-full fixed top-0 left-0 p-4 shadow-lg h-full overflow-y-auto transition-opacity duration-200" id="mobile-menu" style="display: none; z-index: 9999;">
+            <!-- Close Button -->
+            <div class="flex justify-between items-center mb-8 pt-4">
+                <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-10">
+                <button id="close-menu" class="text-white focus:outline-none">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Accordion Menu Items -->
+            <div class="flex flex-col space-y-2">
+                <!-- Quran Tafseer Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#quran-tafseer" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Quran Tafseer</a>
+                </div>
+
+                <!-- Arabic Grammar Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#arabic-grammar" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Arabic Grammar</a>
+                </div>
+
+                <!-- Dawah Initiatives Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#dawah" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Dawah Initiatives</a>
+                </div>
+
+                <!-- Youth Engagement Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#youth" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Youth Engagement</a>
+                </div>
+
+                <!-- Conference Gallery Section -->
+                <div class="accordion-item border-b border-gray-800">
+                    <a href="#conference-gallery" class="text-white hover:text-primary-gold transition-colors py-4 px-2 block font-medium text-lg">Conference</a>
+                </div>
+
+                <!-- Contact Button -->
+                <div class="mt-6">
+                    <a href="index.html#contact" class="bg-primary-gold text-primary-black px-4 py-3 transition-colors font-medium block text-center hover:bg-yellow-500" id="mobile-contact-link">Contact Us</a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex justify-center space-x-6 mt-8 pt-4 border-t border-gray-800">
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-gold transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[45vh] flex items-center justify-center bg-primary-black text-white overflow-hidden">
+        <img src="images/quranpage.jpg" alt="Programs Background" class="absolute inset-0 w-full h-full object-cover opacity-40">
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-black via-primary-black to-black opacity-90"></div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-primary-gold opacity-10 transform -skew-x-12"></div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Title with Accent -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+                    <span class="relative z-10">Our Programs</span>
+                    <span class="absolute -bottom-3 left-0 right-0 h-1 bg-primary-gold transform -skew-x-12"></span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mt-8 leading-relaxed">
+                    Discover our comprehensive Islamic education programs designed to deepen your connection with the Quran
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Arabic Grammar Section -->
+    <section id="arabic-grammar" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <!-- Content -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-6">Arabic Grammar Program</h2>
+                    <div class="w-24 h-1 bg-primary-gold mb-8"></div>
+
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Master classical Arabic grammar through our structured program, designed to help you understand the Quran in its original language.
+                        </p>
+
+                        <!-- Program Card (Similar to Tafseer Card) -->
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <!-- Card Header -->
+                            <div class="bg-primary-gold p-6 flex items-center">
+                                <div class="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-language text-white text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white">Arabic Grammar</h3>
+                                    <p class="text-white text-opacity-90">Morphology & Syntax Mastery</p>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="bg-white p-6">
+                                <h4 class="flex items-center text-xl font-bold mb-4">
+                                    <i class="fas fa-graduation-cap text-primary-gold mr-2"></i>
+                                    What You'll Learn
+                                </h4>
+
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-gold bg-opacity-10 rounded-full p-1 mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-gold"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold">Foundational Grammar</h5>
+                                            <p class="text-gray-600">Master the essential rules of Arabic sentence structure and word formation</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-gold bg-opacity-10 rounded-full p-1 mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-gold"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold">Vocabulary Building</h5>
+                                            <p class="text-gray-600">Develop a rich Arabic vocabulary focused on Quranic terms and expressions</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-gold bg-opacity-10 rounded-full p-1 mt-1 mr-3">
+                                            <i class="fas fa-check text-primary-gold"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold">Practical Application</h5>
+                                            <p class="text-gray-600">Apply grammatical concepts directly to Quranic verses and classical texts</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
+                                    <div class="flex items-center">
+                                        <i class="far fa-clock text-primary-gold mr-2"></i>
+                                        <span>44-week program</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-users text-primary-gold mr-2"></i>
+                                        <span>Group sessions by batches - Currently running batch 9</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-video text-primary-gold mr-2"></i>
+                                        <span>Online & in-person</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-certificate text-primary-gold mr-2"></i>
+                                        <span>Certification available</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <a href="#" class="btn btn-primary w-full items-center justify-center">
+                                        <i class="fas fa-calendar-alt mr-2"></i>
+                                        Register Now for Batch 10
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <!-- Main 16:9 Image -->
+                        <div class="relative z-10 overflow-hidden rounded-lg shadow-xl mb-4">
+                            <img src="./images/arabicclass9.jpeg" alt="Arabic Grammar Class" class="w-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Master Classical Arabic</h3>
+                                <p>Structured learning path from basics to advanced grammar</p>
+                            </div>
+                        </div>
+
+                        <!-- 6 Square Images in a Grid (3x2) -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass4.jpeg" alt="Vocabulary Building" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass2.jpeg" alt="Sentence Structure" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass6.jpeg" alt="Verb Conjugation" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass3.jpeg" alt="Reading Practice" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass7.jpeg" alt="Writing Skills" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg aspect-square">
+                                <img src="./images/arabicclass1.jpg" alt="Quranic Application" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary-gold opacity-10 rounded-full"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-gold opacity-10 rounded-full"></div>
+                    </div>
+
+                    <!-- Testimonial Slider -->
+                    <div class="mt-8" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-bold mb-4">What Our Students Say</h3>
+
+                        <div class="arabic-testimonials relative">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-slide active bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-primary-gold">
+                                <div class="flex items-start">
+                                    <div class="text-primary-gold text-4xl mr-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div>
+                                        <p class="italic text-gray-600 mb-4">"Learning Arabic grammar has opened up a whole new dimension in my understanding of the Quran. The structured approach made complex concepts accessible and engaging."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <h4 class="font-bold">Mohammad Qureshi</h4>
+                                                <p class="text-sm text-gray-500">Batch 8 Student</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-slide hidden bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-primary-gold">
+                                <div class="flex items-start">
+                                    <div class="text-primary-gold text-4xl mr-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div>
+                                        <p class="italic text-gray-600 mb-4">"After years of struggling with Arabic texts, this program gave me the tools to confidently teach others. The teaching methodology is exceptional."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <h4 class="font-bold">Minhaj Siddiqui</h4>
+                                                <p class="text-sm text-gray-500">Batch 8 Student</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-slide hidden bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-primary-gold">
+                                <div class="flex items-start">
+                                    <div class="text-primary-gold text-4xl mr-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div>
+                                        <p class="italic text-gray-600 mb-4">"As a parent, I've seen my children's connection to their faith deepen through understanding Arabic. The program's focus on practical application makes all the difference."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <h4 class="font-bold">Intikhab Alam</h4>
+                                                <p class="text-sm text-gray-500">Batch 7 Student</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Dots -->
+                            <div class="flex justify-center mt-4 space-x-2">
+                                <button class="testimonial-dot active w-3 h-3 rounded-full bg-primary-gold" data-slide="0"></button>
+                                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
+                                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-slide="2"></button>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md focus:outline-none testimonial-prev">
+                                <i class="fas fa-chevron-left text-primary-gold"></i>
+                            </button>
+                            <button class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md focus:outline-none testimonial-next">
+                                <i class="fas fa-chevron-right text-primary-gold"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Journey Section -->
+    <section id="journey" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Your Learning Journey</h2>
+                <div class="w-24 h-1 bg-primary-gold mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                    Discover the path to deepening your connection with the Quran through our structured learning approach
+                </p>
+            </div>
+
+            <!-- Journey Timeline -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Center Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-gold"></div>
+
+                <!-- Journey Steps -->
+                <div class="space-y-12 md:space-y-0" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-2xl font-bold mb-3">Foundation</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Begin your journey with foundational Arabic grammar and Quranic vocabulary. Develop the basic skills needed to approach the Quran linguistically.
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Basic Arabic grammar</li>
+                                    <li>Essential Quranic vocabulary</li>
+                                    <li>Introduction to Tajweed</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 flex justify-center md:justify-start relative">
+                            <!-- Timeline Dot -->
+                            <div class="bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl z-10 md:absolute md:left-0 md:-translate-x-1/2">
+                                1
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-16 mb-8 md:mb-0">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-2xl font-bold mb-3">Comprehension</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Advance to understanding Quranic verses in their original Arabic. Learn to analyze sentence structures and grammatical forms.
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Intermediate Arabic grammar</li>
+                                    <li>Sentence structure analysis</li>
+                                    <li>Word-by-word translation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                            <!-- Timeline Dot -->
+                            <div class="bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl z-10 md:absolute md:right-0 md:translate-x-1/2">
+                                2
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-2xl font-bold mb-3">Interpretation</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Delve into the deeper meanings of the Quran through linguistic tafseer. Understand the rhetorical devices and literary beauty.
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Advanced grammatical analysis</li>
+                                    <li>Rhetorical devices (Balagha)</li>
+                                    <li>Contextual understanding</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 flex justify-center md:justify-start relative">
+                            <!-- Timeline Dot -->
+                            <div class="bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl z-10 md:absolute md:left-0 md:-translate-x-1/2">
+                                3
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-16 mb-8 md:mb-0">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-2xl font-bold mb-3">Application</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Apply your knowledge to live a Quran-centered life and share its wisdom with others. Become a servant of the Quran in your community.
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Teaching and mentoring</li>
+                                    <li>Community leadership</li>
+                                    <li>Dawah and outreach</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                            <!-- Timeline Dot -->
+                            <div class="bg-primary-gold rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl z-10 md:absolute md:right-0 md:translate-x-1/2">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Step -->
+                <div class="text-center mt-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="inline-block bg-primary-gold text-primary-black px-8 py-4 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Become a True Khadim of the Quran</h3>
+                        <p>Transform your relationship with the Quran and inspire others on their journey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add detail information about course overview -->
+
+     <!-- Quran Tafseer Section -->
+     <section id="quran-tafseer" class="quran-tafseer-section py-12 bg-white relative overflow-hidden">
+        /
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold mt-2 mb-4 relative inline-block">
+                    <span class="relative z-10">Quran Tafseer Program</span>
+                    <span class="absolute -bottom-2 left-0 right-0 h-1 bg-primary-gold transform -skew-x-12"></span>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mt-6">
+                    Our comprehensive Tafseer program offers in-depth exploration of Quranic verses through detailed linguistic analysis and contextual understanding by Dr. Israr Ahmed in where he explains the Quranic verses in a way that is easy to understand.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Content -->
+                <div class="lg:col-span-5" data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Program Card -->
+                    <div class="bg-white border border-gray-100 rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <!-- Card Header -->
+                        <div class="bg-gradient-to-r from-primary-gold to-yellow-500 p-6 text-white">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-book-quran text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Tafseer Al-Quran</h3>
+                                    <p class="text-white text-opacity-80 text-sm">Linguistic & Contextual Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-4 flex items-center">
+                                <i class="fas fa-graduation-cap text-primary-gold mr-2"></i>
+                                What You'll Learn
+                            </h4>
+
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <div class="bg-primary-gold bg-opacity-10 p-2 rounded-full mr-3 flex-shrink-0">
+                                        <i class="fas fa-check text-primary-gold text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium block mb-1">Linguistic Analysis</span>
+                                        <p class="text-gray-600 text-sm">Verse-by-verse explanation with deep insights into Arabic grammar and vocabulary</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary-gold bg-opacity-10 p-2 rounded-full mr-3 flex-shrink-0">
+                                        <i class="fas fa-check text-primary-gold text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium block mb-1">Historical Context</span>
+                                        <p class="text-gray-600 text-sm">Understanding the circumstances of revelation and historical background</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary-gold bg-opacity-10 p-2 rounded-full mr-3 flex-shrink-0">
+                                        <i class="fas fa-check text-primary-gold text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium block mb-1">Contemporary Application</span>
+                                        <p class="text-gray-600 text-sm">Applying Quranic wisdom to modern life challenges and situations</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Program Details -->
+                            <div class="grid grid-cols-2 gap-4 mb-8 text-sm">
+                                <div class="flex items-center">
+                                    <i class="far fa-clock text-primary-gold mr-2"></i>
+                                    <span>44-week program</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-primary-gold mr-2"></i>
+                                    <span>Small group sessions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-video text-primary-gold mr-2"></i>
+                                    <span>Online & in-person</span>
+                                </div>
+                            </div>
+
+                            <!-- Action Button -->
+                            <div>
+                                <a href="#" class="btn btn-primary w-full flex justify-center items-center">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    View Schedule
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="lg:col-span-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="relative z-10 overflow-hidden rounded-lg shadow-xl">
+                            <img src="./images/Tafseerclass.jpeg" alt="Tafseer Class" class="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Expert Instruction</h3>
+                                <p>Learn from qualified scholars with deep knowledge of Quranic sciences</p>
+                            </div>
+                        </div>
+
+                        <!-- Smaller Images -->
+                        <div class="grid grid-cols-3 gap-4 mt-4">
+                            <div class="overflow-hidden rounded-lg shadow-lg">
+                                <img src="./images/Lecture class 01.jpg" alt="Quran Study" class="w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg">
+                                <img src="./images/lecture class 02.jpg" alt="Group Discussion" class="w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-lg">
+                                <img src="./images/lecture class 03.jpg" alt="Student Learning" class="w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary-gold opacity-10 rounded-full"></div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-gold opacity-10 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dawah Initiatives Section -->
+    <section id="dawah" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Content -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-6">Dawah Initiatives</h2>
+                    <div class="w-24 h-1 bg-primary-gold mb-8"></div>
+
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our Dawah programs focus on sharing the beauty and wisdom of the Quran with the wider community through engaging outreach activities and educational events.
+                        </p>
+
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4">Our Initiatives</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-mosque text-primary-gold mt-1 mr-3"></i>
+                                    <span>Mosque open days and community tours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-book text-primary-gold mt-1 mr-3"></i>
+                                    <span>Islamic literature distribution</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-handshake text-primary-gold mt-1 mr-3"></i>
+                                    <span>Interfaith dialogue and cooperation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chalkboard-teacher text-primary-gold mt-1 mr-3"></i>
+                                    <span>Public lectures and workshops</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-primary-gold bg-opacity-10 p-6 rounded-lg border-l-4 border-primary-gold">
+                            <h3 class="text-xl font-bold mb-2">Volunteer Opportunities</h3>
+                            <p class="text-gray-700">
+                                Join our team of dedicated volunteers to help spread the message of the Quran and build bridges within our community.
+                            </p>
+                            <a href="#" class="inline-block mt-4 text-primary-gold font-medium hover:underline">
+                                Learn how to get involved <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                Upcoming Events
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-hands-helping mr-2"></i>
+                                Volunteer Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <img src="images/dawah-main.jpg" alt="Dawah Event" class="rounded-lg shadow-xl w-full">
+
+                        <!-- Overlapping Images -->
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <img src="images/dawah1.jpg" alt="Community Outreach" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img src="images/dawah2.jpg" alt="Interfaith Dialogue" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        </div>
+
+                        <!-- Testimonial Overlay -->
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl max-w-xs hidden md:block">
+                            <p class="italic text-gray-600 text-sm">"The Dawah program helped me understand how to effectively share the beauty of Islam with others in a respectful and engaging way."</p>
+                            <div class="flex items-center mt-3">
+                                <div class="w-8 h-8 bg-primary-gold rounded-full flex items-center justify-center text-white font-bold mr-2">A</div>
+                                <span class="font-medium">Ahmed, Volunteer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Youth Engagement Section -->
+    <section id="youth" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <!-- Content -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-6">Youth Engagement</h2>
+                    <div class="w-24 h-1 bg-primary-gold mb-8"></div>
+
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our youth programs are designed to nurture the next generation of Muslims with a strong connection to the Quran, combining spiritual development with fun, engaging activities.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-5 rounded-lg shadow-md">
+                                <div class="text-primary-gold text-3xl mb-2">
+                                    <i class="fas fa-futbol"></i>
+                                </div>
+                                <h3 class="font-bold text-lg mb-2">Sports & Recreation</h3>
+                                <p class="text-gray-600 text-sm">Weekly sports activities that promote teamwork, discipline, and Islamic values</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-lg shadow-md">
+                                <div class="text-primary-gold text-3xl mb-2">
+                                    <i class="fas fa-campground"></i>
+                                </div>
+                                <h3 class="font-bold text-lg mb-2">Camps & Retreats</h3>
+                                <p class="text-gray-600 text-sm">Immersive experiences that strengthen faith and build lasting friendships</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-lg shadow-md">
+                                <div class="text-primary-gold text-3xl mb-2">
+                                    <i class="fas fa-microphone-alt"></i>
+                                </div>
+                                <h3 class="font-bold text-lg mb-2">Leadership Training</h3>
+                                <p class="text-gray-600 text-sm">Developing future community leaders through mentorship and practical experience</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-lg shadow-md">
+                                <div class="text-primary-gold text-3xl mb-2">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h3 class="font-bold text-lg mb-2">Creative Arts</h3>
+                                <p class="text-gray-600 text-sm">Expressing Islamic values through calligraphy, poetry, and other creative mediums</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary-black text-white p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-3 text-primary-gold">Age Groups</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">Children (7-12)</span>
+                                <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">Teens (13-17)</span>
+                                <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm">Young Adults (18-25)</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-users mr-2"></i>
+                                Join Youth Program
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-calendar-week mr-2"></i>
+                                View Activities
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="relative overflow-hidden rounded-lg shadow-xl">
+                        <!-- Main Image with Overlay -->
+                        <img src="images/youth-program.jpg" alt="Youth Activities" class="w-full">
+
+                        <!-- Image Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-black to-transparent opacity-70"></div>
+
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Join Our Next Event</h3>
+                            <p class="mb-4">Summer Youth Camp 2023: Connecting Hearts to the Quran</p>
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>August 15-20</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>Auckland, NZ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div class="absolute top-4 right-4 bg-primary-gold text-primary-black px-3 py-1 rounded-full text-sm font-bold">
+                            Registration Open
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <img src="images/youth-testimonial1.jpg" alt="Youth Testimonial" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <h4 class="font-bold text-sm">Yusuf, 16</h4>
+                                    <div class="flex text-primary-gold text-xs">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"The youth program helped me find friends who share my values and love for Islam."</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <img src="images/youth-testimonial2.jpg" alt="Youth Testimonial" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <h4 class="font-bold text-sm">Aisha, 14</h4>
+                                    <div class="flex text-primary-gold text-xs">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">"I've learned so much about the Quran in a fun and engaging way!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="conference-gallery" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-gold opacity-5 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-gold opacity-5 rounded-full -translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-gold font-medium tracking-wider uppercase text-sm">Event Highlights</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4 relative inline-block">
+                    <span class="relative z-10">Arabic Conference 2024</span>
+                    <span class="absolute -bottom-2 left-0 right-0 h-1 bg-primary-gold transform -skew-x-12"></span>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mt-6">
+                    Explore highlights from our annual Arabic language conference, showcasing the importance of Arabic learning, student achievements, and the impact of our programs.
+                </p>
+            </div>
+
+            <!-- Gallery Filter Navigation -->
+            <div class="flex flex-wrap justify-center mb-12 gap-4">
+                <button class="gallery-filter-btn active px-6 py-2 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-all duration-300" data-filter="all">All</button>
+                <button class="gallery-filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-all duration-300" data-filter="importance">Why Learn Arabic</button>
+                <button class="gallery-filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-all duration-300" data-filter="course">Course Overview</button>
+                <button class="gallery-filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-all duration-300" data-filter="certification">Certifications</button>
+                <button class="gallery-filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-primary-gold hover:text-white transition-all duration-300" data-filter="success">Success Stories</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Why Learn Arabic -->
+                <div class="gallery-item importance overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images/arabic-importance1.jpg" alt="Importance of Arabic" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Gateway to Quranic Understanding</h3>
+                            <p class="text-sm">Discover how Arabic unlocks the true meaning of the Quran</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item importance overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="images/arabic-importance2.jpg" alt="Cultural Connection" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Cultural Heritage</h3>
+                            <p class="text-sm">Connect with 1400 years of rich Islamic tradition and scholarship</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <div class="gallery-item course overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="images/course-overview1.jpg" alt="Course Structure" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Comprehensive Curriculum</h3>
+                            <p class="text-sm">Our structured approach to mastering Arabic grammar and vocabulary</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item course overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images/course-timeline.jpg" alt="Course Timeline" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Learning Journey</h3>
+                            <p class="text-sm">From basics to advanced: our 12-month Arabic mastery timeline</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="gallery-item certification overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="images/certification-ceremony.jpg" alt="Certification Ceremony" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Graduation Ceremony</h3>
+                            <p class="text-sm">Celebrating achievement and dedication to Arabic language mastery</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item certification overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="images/certificate-sample.jpg" alt="Certificate Sample" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Recognized Certification</h3>
+                            <p class="text-sm">Internationally acknowledged credentials for Arabic proficiency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Stories -->
+                <div class="gallery-item success overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images/success-story1.jpg" alt="Student Success" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">From Beginner to Teacher</h3>
+                            <p class="text-sm">How Ahmed mastered Arabic and now teaches others</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item success overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="images/success-story2.jpg" alt="Family Learning" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Family Transformation</h3>
+                            <p class="text-sm">How the Rahman family integrated Arabic into their daily lives</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item success overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="images/success-story3.jpg" alt="Youth Success" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Youth Achievement</h3>
+                            <p class="text-sm">Young students excelling in Arabic competitions and studies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Highlights -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-6 text-center">Conference Highlights</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary-gold mb-2">250+</div>
+                        <p class="text-gray-600">Attendees</p>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary-gold mb-2">12</div>
+                        <p class="text-gray-600">Expert Speakers</p>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary-gold mb-2">8</div>
+                        <p class="text-gray-600">Interactive Workshops</p>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary-gold mb-2">85</div>
+                        <p class="text-gray-600">Graduates Recognized</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-8 text-center">What Participants Say</h3>
+
+                <div class="conference-testimonials">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary-gold mb-4">
+                        <div class="flex items-start">
+                            <div class="text-primary-gold text-4xl mr-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-4">"The Arabic Conference was transformative. I've been studying Arabic for years, but the intensive workshops and expert guidance helped me break through plateaus I'd been stuck on for months."</p>
+                                <div class="flex items-center">
+                                    <img src="images/conf-testimonial1.jpg" alt="Testimonial" class="w-10 h-10 rounded-full mr-3 object-cover">
+                                    <div>
+                                        <h4 class="font-bold">Maryam Khalid</h4>
+                                        <p class="text-sm text-gray-500">Conference Attendee, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary-gold mb-4 hidden">
+                        <div class="flex items-start">
+                            <div class="text-primary-gold text-4xl mr-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-4">"As a parent, seeing my children receive their Arabic proficiency certificates was one of my proudest moments. The conference showed me how far they've come in their journey with the language."</p>
+                                <div class="flex items-center">
+                                    <img src="images/conf-testimonial2.jpg" alt="Testimonial" class="w-10 h-10 rounded-full mr-3 object-cover">
+                                    <div>
+                                        <h4 class="font-bold">Hassan Abdullah</h4>
+                                        <p class="text-sm text-gray-500">Parent of Two Students</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary-gold mb-4 hidden">
+                        <div class="flex items-start">
+                            <div class="text-primary-gold text-4xl mr-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <p class="italic text-gray-600 mb-4">"The conference's focus on practical application of Arabic in understanding the Quran was exactly what I needed. I now feel confident in my ability to explore Quranic texts with a deeper understanding."</p>
+                                <div class="flex items-center">
+                                    <img src="images/conf-testimonial3.jpg" alt="Testimonial" class="w-10 h-10 rounded-full mr-3 object-cover">
+                                    <div>
+                                        <h4 class="font-bold">Zaynab Rahman</h4>
+                                        <p class="text-sm text-gray-500">Advanced Program Graduate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Navigation -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-primary-gold"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-12">
+                <a href="#" class="btn btn-primary inline-flex items-center">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    Register for 2025 Conference
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-primary-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 z-0">
+            <img src="images/quranpage.jpg" alt="Quran Background" class="w-full h-full object-cover">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-gold" data-aos="fade-up">Ready to Begin Your Journey?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Join our community of learners and embark on a transformative path to understanding the Quran
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn btn-primary join-now-btn transition-all duration-300">
+                    <span class="flex items-center">
+                        Register Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary" id="cta-contact-link">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-primary-black text-white py-12 relative">
+        <!-- Gold Border Top with Translation Effect -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary-gold transform -translate-y-5 shadow-gold"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Footer Content -->
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <!-- Logo and Tagline -->
+                <div class="mb-8 md:mb-0 text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <a href="index.html" class="footer-logo-container inline-block mb-4" id="footer-logo-link">
+                        <img src="./images/logocurve-white.png" alt="Khuddam Logo" class="h-16 mb-3">
+                    </a>
+                    <p class="text-gray-400 max-w-xs">Serving the Quran. Serving the Ummah through linguistic education and spiritual development.</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-6 flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-primary-gold text-white hover:text-primary-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-8 md:mb-0 text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Quick Links</h3>
+                    <ul class="grid grid-cols-2 gap-3">
+                        <li><a href="index.html#about" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>About</a></li>
+                        <li><a href="index.html#mission" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Mission</a></li>
+                        <li><a href="index.html#programs" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Programs</a></li>
+                        <li><a href="index.html#capitals" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Four Capitals</a></li>
+                        <li><a href="#journey" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Journey</a></li>
+                        <li><a href="index.html#contact" class="footer-link text-gray-400 hover:text-primary-gold transition-all duration-300 flex items-center" id="footer-contact-link"><i class="fas fa-chevron-right mr-2 text-xs text-primary-gold"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="text-center md:text-left w-full md:w-auto mx-auto md:mx-0">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-gold">Contact Us</h3>
+                    <ul class="space-y-4 flex flex-col items-center md:items-start">
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">Auckland, New Zealand</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-envelope text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">info@khuddam.org</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-phone-alt text-primary-gold"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2023 Khuddam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="programs.min.js"></script>
+</body>
+</html>
